@@ -1,0 +1,12 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Next Level Week - desenvolvimento de um sistema para fins ecológicos. Coleta e descarte de resíduos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Gustavo Braz",
+  "license": "ISC"
+}
