@@ -10,7 +10,13 @@ const app = express();
 
 app.get('/users', (request, response) => {
   console.log('Listagem de usuários');
-  response.send('Hello World');
+
+  response.json([
+    'Gustavo',
+    'Eduardo',
+    'Wagner',
+    'Renata'
+  ]);
 });
 
 app.listen(33333);
