@@ -35,8 +35,11 @@ const users = [
 ];
 
 app.get('/users', (request, response) => {
-  console.log('Listagem de usuários');
-  return response.json(users);
+  const search = String(request.query.search);
+
+  const filteredUsers = search ? users.filter(user => user.includes(search)) : users;
+
+  return response.json(filteredUsers);
 });
 
 app.get('/users/:id', (request, response) => {
@@ -50,11 +53,9 @@ app.get('/users/:id', (request, response) => {
 app.post('/users', (request, response) => {
   const data = request.body;
   console.log(data);
-
-
   const user = {
-    name: 'Gustavo',
-    email: 'gustavo.braz89@gmail.com'
+    name: data.name,
+    email: data.email
   }
   return response.json(user);
 });
